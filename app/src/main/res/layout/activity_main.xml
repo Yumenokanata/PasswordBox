@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/color_wh"
+    tools:context=".ui.activity.MainActivity">
+
+    <ListView
+        android:id="@+id/main_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:dividerHeight="0dp"
+        android:divider="@color/color_wh"
+        tools:listitem="@layout/item_layout" />
+
+    <Button
+        style="@style/green_btn"
+        android:id="@+id/add_item_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>
