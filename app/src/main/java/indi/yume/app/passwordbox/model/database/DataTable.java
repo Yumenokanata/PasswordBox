@@ -17,6 +17,8 @@ import lombok.EqualsAndHashCode;
 /**
  * Created by bush2 on 2016/4/4.
  */
+@EqualsAndHashCode(callSuper = true)
+@Data
 @Table(database = MainDataBase.class, name = "date_table")
 public class DataTable extends BaseModel implements Parcelable {
 
@@ -41,62 +43,6 @@ public class DataTable extends BaseModel implements Parcelable {
 
     @Column
     private int labelColor = 0xff19b3b6;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getWebsite() {
-        return website;
-    }
-
-    public void setWebsite(String website) {
-        this.website = website;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getNote() {
-        return note;
-    }
-
-    public void setNote(String note) {
-        this.note = note;
-    }
-
-    public int getLabelColor() {
-        return labelColor;
-    }
-
-    public void setLabelColor(int labelColor) {
-        this.labelColor = labelColor;
-    }
 
     public static DataTable getDataById(long id) {
         return new Select()
