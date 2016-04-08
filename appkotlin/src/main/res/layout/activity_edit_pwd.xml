@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/color_wh"
+    tools:context="indi.yume.app.passwordbox.ui.activity.EditPwdActivity">
+
+    <EditText
+        android:id="@+id/password_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:paddingStart="0dp"
+        android:hint="密码"/>
+
+    <indi.yume.app.passwordbox.view.PwdCheckView
+        android:id="@+id/check_pwd_view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <CheckBox
+            android:id="@+id/small_a_to_z_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_column="0"
+            android:layout_row="0"
+
+            android:text="a~z"
+            android:paddingStart="10dp"
+
+            android:layout_marginEnd="30dp"/>
+
+        <CheckBox
+            android:id="@+id/bigger_a_to_z_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_column="0"
+            android:layout_row="1"
+
+            android:text="A~Z"
+            android:paddingStart="10dp"/>
+
+        <CheckBox
+            android:id="@+id/number_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+
+            android:layout_column="1"
+            android:layout_row="0"
+
+            android:text="0~9"
+            android:paddingStart="10dp" />
+
+        <CheckBox
+            android:id="@+id/special_char_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_column="1"
+            android:layout_row="1"
+
+            android:text="!@#..."
+            android:paddingStart="10dp"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="生成密码长度："/>
+
+        <TextView
+            android:id="@+id/pwd_length_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="8"/>
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/pwd_length_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="24"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        style="@style/green_btn_empty"
+        android:id="@+id/generate_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="生成"
+
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        style="@style/green_btn"
+        android:id="@+id/save_pwd_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存"
+
+        android:layout_marginTop="30dp"/>
+
+</LinearLayout>
